@@ -17,7 +17,7 @@ import {
   Ban,
 } from "lucide-react";
 
-const moduleIcons: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
+const moduleIcons: Record<string, React.ElementType> = {
   building: Building2,
   "clipboard-check": ClipboardCheck,
   "bar-chart-3": BarChart3,
@@ -170,7 +170,7 @@ function StatCard({
   label,
   value,
 }: {
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  icon: React.ElementType;
   label: string;
   value: number;
 }) {
@@ -205,3 +205,4 @@ function EmptyModulesState() {
     </div>
   );
 }
+
