@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import {
   Eye,
@@ -317,6 +318,13 @@ export default function LoginPage() {
               <ShieldCheck className="h-4 w-4" strokeWidth={1.75} />
               Entrar com SSO da empresa
             </button>
+
+            <p className="mt-6 text-center text-sm text-[#6B7094]">
+              Ainda não tem uma conta?{" "}
+              <Link href="/signup" className="font-medium text-[#6C5CE7] hover:underline">
+                Criar conta
+              </Link>
+            </p>
 
             <p className="mt-8 text-center text-xs text-[#A6ABC8]">
               Ao continuar, você concorda com os{" "}
